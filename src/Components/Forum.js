@@ -3,7 +3,6 @@ import { Tabs } from 'antd';
 import SingleConversation from "./SubComponents/SingleConversation";
 
 const onChange = (key) => {
-    console.log(key);
 };
 
 // Can be add to a map and parse data from the server side

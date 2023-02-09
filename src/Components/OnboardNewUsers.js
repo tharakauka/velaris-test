@@ -2,6 +2,8 @@ import React from "react";
 import { Steps, Radio, Button, Checkbox, Form, Input } from 'antd';
 
 function OnBoardNewUsers(){
+    const onChange = (e) => {};
+
     return(
         <div>
             <h3>Onboard new user</h3>
@@ -28,7 +30,6 @@ function OnBoardNewUsers(){
                 labelCol={{ span: 4 }}
                 wrapperCol={{ span: 20 }}
                 style={{ maxWidth: 600 }}
-                initialValues={{ remember: true }}
                 autoComplete="off"
             >
                 <Form.Item
@@ -36,7 +37,7 @@ function OnBoardNewUsers(){
                 name="role"
                 
                 >
-                    <Radio.Group defaultValue="user">
+                    <Radio.Group onChange={onChange} defaultValue="user">
                         <Radio.Button value="user">User</Radio.Button>
                         <Radio.Button value="editor">Editor</Radio.Button>
                         <Radio.Button value="admin">Admin</Radio.Button>
