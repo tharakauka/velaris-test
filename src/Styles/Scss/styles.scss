@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500;2,700&display=swap');
+@import 'variables.scss';
+@import 'mixin.scss';
+@import 'common.scss';
+
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: $backgroundColor;
+}
+h1, .h1{
+    font-weight: 500;
+    font-size: 2.375rem;
+}
+h3, .h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.header{
+    padding-top: 26px;
+    margin-bottom: 1em;
+}
+.compWrapper{
+    border: 1px rgba(0, 0, 0, 0.05) solid;
+    background-color: #FFF;
+    padding: 12px 24px 24px;
+    border-radius: 5px;
+}
+.scWrapper{
+    display: flex;
+    padding-block: 24px;
+    border-bottom: 1px $nutralBoarderColor solid;
+    &:last-child{
+        border-bottom: none;
+    }
+    .userImg{
+        width: 32px;
+        margin-right: 16px;
+        height: 32px;
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            height: 100%;
+        }
+    }
+    .userContent{
+        flex: 1;
+        .usrName{
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .cnvTitle{
+            color: $bodytextColorLight;
+            margin-bottom: 16px;
+        }
+        .cnvBrief{
+            margin-bottom: 16px;
+        }
+        .cnvActions{
+            display: flex;
+            .ctaBtn, .reactions{
+                flex: 1;
+                align-self: center;
+                display: flex;
+                color: $bodytextColorLight;
+            }
+            .reactions{
+                justify-content:flex-end;
+                padding-left: 24px;
+                .icon{
+                    margin-right: 8px;
+                    color: $bodyTextColor;
+                }
+                .like{
+                    padding-right: 24px;
+                    border-right: 1px $nutralBoarderColor solid;
+                }
+                .rate{
+                    padding-left: 24px;
+                }
+            }
+        }
+    }
+}
+.ant{
+    &-steps-item-title{
+        font-size: $fontSize !important;
+    }
+    &-upload{
+        &-wrapper{
+            font-family: $primaryFont !important;
+        }
+        &-drag{
+            border: 1px solid $nutralBoarderColor !important;
+            border-radius: 5px !important;
+            &-container{
+                width: 100%;
+                padding-inline: 24px;
+                display: block !important;
+                margin-inline: auto;
+                max-width: 395px; 
+            }
+        }
+        &-text{
+            font-size: 14px !important;
+        }
+    }
+}
+.steps{
+    margin-block: 42px;
+}
+.upload{
+    margin-block-start: 42px;
+}
